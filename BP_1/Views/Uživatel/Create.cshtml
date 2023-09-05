@@ -1,0 +1,53 @@
+﻿@model BP_1.Models.Uživatel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Uživatel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Jméno" class="control-label"></label>
+                <input asp-for="Jméno" class="form-control" />
+                <span asp-validation-for="Jméno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Přijmení" class="control-label"></label>
+                <input asp-for="Přijmení" class="form-control" />
+                <span asp-validation-for="Přijmení" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Věk" class="control-label"></label>
+                <input asp-for="Věk" class="form-control" />
+                <span asp-validation-for="Věk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Výška" class="control-label"></label>
+                <input asp-for="Výška" class="form-control" />
+                <span asp-validation-for="Výška" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Váha" class="control-label"></label>
+                <input asp-for="Váha" class="form-control" />
+                <span asp-validation-for="Váha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

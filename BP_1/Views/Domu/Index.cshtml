@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Domovská Stránka";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Aplikace pro tvorbu tréninkových plánů</h1>
+    <h2>Vítejte</h2>
+    <p>Pomůžeme ti k dosažení tvých fitness cílů.</p>
+    
+</div>
+
+@if (!SignInManager.IsSignedIn(User))
+{
+    <div class="login_window">
+        <partial name="_LoginPartial" />
+    </div>
+}
+else
+{
+    <div class="login_window">
+        <p>Tvůj Tréninkový Plán (odkaz na TP)</p>
+    </div>
+}
