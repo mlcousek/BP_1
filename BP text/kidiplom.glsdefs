@@ -1,0 +1,84 @@
+\glsdefs@newdocentry{TP}%
+{%
+name={TP},%
+sort={TP},%
+type={acronym},%
+first={TP},%
+firstplural={TPs},%
+text={TP},%
+plural={TPs},%
+description={Tréninkový plán},%
+descriptionplural={Tréninkový plán},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Tréninkový plán},%
+longplural={Tréninkový pláns},%
+short={TP},%
+shortplural={TPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{PR}%
+{%
+name={PR},%
+sort={PR},%
+type={acronym},%
+first={PR},%
+firstplural={PRs},%
+text={PR},%
+plural={PRs},%
+description={Personal record - maximálka},%
+descriptionplural={Personal record - maximálka},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Personal record - maximálka},%
+longplural={Personal record - maximálkas},%
+short={PR},%
+shortplural={PRs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{PPL}%
+{%
+name={PPL},%
+sort={PPL},%
+type={acronym},%
+first={PPL},%
+firstplural={PPLs},%
+text={PPL},%
+plural={PPLs},%
+description={Push Pull Legs},%
+descriptionplural={Push Pull Legs},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Push Pull Legs},%
+longplural={Push Pull Legss},%
+short={PPL},%
+shortplural={PPLs},%
+counter={page},%
+parent={},%
+%
+}%
+
