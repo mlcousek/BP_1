@@ -1,12 +1,12 @@
 ﻿@page
 @model LoginWith2faModel
 @{
-    ViewData["Title"] = "Two-factor authentication";
+    ViewData["Title"] = "Dvoufázové ověření";
 }
 
 <h1>@ViewData["Title"]</h1>
 <hr />
-<p>Your login is protected with an authenticator app. Enter your authenticator code below.</p>
+<p>Tvůj účet je zabezpečen pomocí dvoufázového ověřování. Níže zadej kód z aplikace.</p>
 <div class="row">
     <div class="col-md-4">
         <form method="post" asp-route-returnUrl="@Model.ReturnUrl">
@@ -20,18 +20,19 @@
             <div class="checkbox mb-3">
                 <label asp-for="Input.RememberMachine" class="form-label">
                     <input asp-for="Input.RememberMachine" />
-                    @Html.DisplayNameFor(m => m.Input.RememberMachine)
+                    @*@Html.DisplayNameFor(m => m.Input.RememberMachine)*@
+                    Zapamatovat si
                 </label>
             </div>
             <div>
-                <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                <button type="submit" class="w-100 btn btn-lg btn-primary">Přihlásit se</button>
             </div>
         </form>
     </div>
 </div>
 <p>
-    Don't have access to your authenticator device? You can
-    <a id="recovery-code-login" asp-page="./LoginWithRecoveryCode" asp-route-returnUrl="@Model.ReturnUrl">log in with a recovery code</a>.
+    Nemáš přístup do své ověřovací aplikace? Můžeš 
+    <a id="recovery-code-login" asp-page="./LoginWithRecoveryCode" asp-route-returnUrl="@Model.ReturnUrl">se přihlásit pomocí záložního kódu.</a>.
 </p>
 
 @section Scripts {
