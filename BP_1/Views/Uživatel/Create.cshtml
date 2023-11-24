@@ -4,14 +4,21 @@
     ViewData["Title"] = "Vytvořit";
 }
 
-<h1>Vytvořit</h1>
 
-<h4>Uživatel</h4>
+
+<h1>Vítej, zadej se své údaje</h1>
+
+@{
+    var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
+    var userId = userIdClaim?.Value;
+}
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label asp-for="Jméno" class="control-label"></label>
                 <input asp-for="Jméno" class="form-control" />
@@ -38,16 +45,29 @@
                 <span asp-validation-for="Váha" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                
+                <input asp-for="Id1" class="form-control" type="hidden" value=@userId />
+                <span asp-validation-for="Id1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Vytvořit" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Zpět na seznam</a>
-</div>
+
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<!--<a href="/">My comment
+
+    if (userId != null)
+    {
+        Model.Id1 = userId;
+    }
+}->

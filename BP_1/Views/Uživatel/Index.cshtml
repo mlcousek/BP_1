@@ -6,9 +6,13 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
+
+@{
+    var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
+    var userId = userIdClaim?.Value;
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -31,11 +35,12 @@
                 @Html.DisplayFor(modelItem => item.Přijmení)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Upravit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detaily</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Smazat</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+

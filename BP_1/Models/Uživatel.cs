@@ -8,6 +8,7 @@
         public int Věk { get; set; }
         public int Výška { get; set; }
         public int Váha { get; set; }
+        public string Id1 { get; set; } = string.Empty;
 
         public Uživatel()
         {

@@ -58,7 +58,7 @@ namespace BP_1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Jméno,Přijmení,Věk,Výška,Váha")] Uživatel uživatel)
+        public async Task<IActionResult> Create([Bind("Id,Jméno,Přijmení,Věk,Výška,Váha,Id1")] Uživatel uživatel)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace BP_1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Jméno,Přijmení,Věk,Výška,Váha")] Uživatel uživatel)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Jméno,Přijmení,Věk,Výška,Váha,Id1")] Uživatel uživatel)
         {
             if (id != uživatel.Id)
             {
